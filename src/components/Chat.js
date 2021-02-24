@@ -6,6 +6,8 @@ import MoreVertRoundedIcon from '@material-ui/icons/MoreVertRounded';
 import AttachFileRoundedIcon from '@material-ui/icons/AttachFileRounded';
 import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import { Avatar, IconButton } from '@material-ui/core';
+import { InsertEmoticon } from '@material-ui/icons';
+import MicIcon from '@material-ui/icons/Mic';
 
 function Chat() {
     return (
@@ -32,11 +34,33 @@ function Chat() {
 
             {/* body */}
             <div className="chat__body">
-                <p>
-                    <span className="chat_name">Abraham</span>
+                <p className="chat__message">
+                    <span className="chat__name">Abraham</span>
                     This is message
-                    <span className="chat_timestamp">{new Date().toUTCString()}</span>
+                    <span className="chat__timestamp">{new Date().toUTCString()}</span>
                 </p>
+
+                <p className="chat__message chat__reciever">
+                    <span className="chat__name">Abraham</span>
+                    This is message
+                    <span className="chat__timestamp">{new Date().toUTCString()}</span>
+                </p>
+
+                <p className="chat__message">
+                    <span className="chat__name">Abraham</span>
+                    This is message
+                    <span className="chat__timestamp">{new Date().toUTCString()}</span>
+                </p>
+            </div>
+
+            {/* Footer */}
+            <div className="chat__footer">
+                <InsertEmoticon/>
+                <form>
+                    <input className="chat__input" placeholder="type message..." type="text"/>
+                    <button type="submit">Send message</button>
+                </form>
+                <MicIcon/>
             </div>
         </div>
     )
